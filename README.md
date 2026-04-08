@@ -1,13 +1,17 @@
 # Lista-de-Tarefas
 Aplicação de Lista de Tarefas com Gestão de Estado
 
-Integrantes:
+Integrantes e suas colaborações:
 
-Caetano Mikulis
-Gabriela Mendes
-Gustavo Kenzo
-Ryan do Vale
-Leonardo Sampaio
+Caetano Mikulis -
+
+Gabriela Mendes - 
+
+Gustavo Kenzo - 
+
+Ryan do Vale - 
+
+Leonardo Sampaio - 
 
 Descrição da aplicação:
 
