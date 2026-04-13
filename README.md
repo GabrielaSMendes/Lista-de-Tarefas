@@ -5,7 +5,7 @@ Este repositório contém os trabalhos desenvolvidos na disciplina de Programaç
 
 ## 📂 Projetos
 
--  Trabalho 1: Hello World em Dart  
+-  Trabalho 1: Hello World em Dart (de caráter individual)
 -  Trabalho 2: CRUD de Biblioteca (POO)  
 -  Trabalho 3: Calculadora em Flutter  
 -  Trabalho 4: Lista de Tarefas com Gestão de Estado  
