@@ -1,8 +1,8 @@
 # README — TRABALHO 2
 
-# Trabalho 2 — CRUD de Biblioteca em Dart
+## Trabalho 2 — CRUD de Biblioteca em Dart
 
-## 1. Descrição do Sistema
+## 📌 Descrição do Sistema
 Este sistema é uma aplicação simples desenvolvida em Dart, executada no terminal, que permite o gerenciamento de livros de uma biblioteca.
 O usuário interage com o programa por meio de um menu, podendo realizar operações básicas como cadastrar, listar, atualizar e remover livros. Essas funcionalidades caracterizam um CRUD (Create, Read, Update, Delete).
 O principal objetivo do sistema é aplicar, na prática, conceitos de Programação Orientada a Objetos (POO).
@@ -13,7 +13,7 @@ O principal objetivo do sistema é aplicar, na prática, conceitos de Programaç
 - ✏️ Atualizar informações
 - ❌ Remover livros
 
-## 2. Explicação das Classes Utilizadas
+## 📋 Explicação das Classes Utilizadas
 
 LIVRO:
 Responsável por representar um livro no sistema.
@@ -47,9 +47,9 @@ Função:
 - Receber dados do usuário
 - Chamar os métodos da classe Biblioteca
 
-## 3. Instruções para Execução:
+## ▶️  Instruções para Execução:
 
-## 4. Exemplos de uso:
+## 💻 Exemplos de uso:
 
 ## 🎥 Vídeo demonstrativo
 
