@@ -1,14 +1,18 @@
 # Calculadora Flutter
 
-## Descrição da Aplicação
+---
 
-Este projeto consiste no desenvolvimento de uma aplicação de calculadora simples utilizando o framework Flutter. A aplicação possui uma interface gráfica funcional e permite a realização de operações matemáticas básicas.
+## 1. Descrição da Aplicação
 
-O principal objetivo do projeto é aplicar os conceitos de componentização de widgets, promovendo organização, reutilização de código e boas práticas no desenvolvimento de interfaces mobile.
+Este projeto consiste no desenvolvimento de uma aplicação de calculadora simples utilizando o framework Flutter.
+
+A aplicação possui uma interface gráfica funcional e permite a realização de operações matemáticas básicas, simulando o funcionamento de uma calculadora tradicional.
+
+O principal objetivo do projeto é aplicar conceitos de componentização de widgets, promovendo organização, reutilização de código e boas práticas no desenvolvimento de interfaces mobile.
 
 ---
 
-## Objetivo
+## 2. Objetivo
 
 Desenvolver uma aplicação mobile que:
 
@@ -19,22 +23,23 @@ Desenvolver uma aplicação mobile que:
 
 ---
 
-## Funcionalidades
+## 3. Funcionalidades
 
 A calculadora implementa as seguintes funcionalidades:
 
 - Inserção de números (0 a 9)  
 - Operações matemáticas:  
-  - Adição  
-  - Subtração  
-  - Multiplicação  
-  - Divisão  
+  - Adição (+)  
+  - Subtração (-)  
+  - Multiplicação (*)  
+  - Divisão (/)  
 - Exibição do resultado no display  
 - Limpeza da operação por meio do botão "C"  
+- Suporte a números decimais  
 
 ---
 
-## Componentização
+## 4. Componentização
 
 O projeto foi estruturado utilizando widgets reutilizáveis para facilitar a manutenção e organização.
 
@@ -42,9 +47,10 @@ O projeto foi estruturado utilizando widgets reutilizáveis para facilitar a man
 
 Responsável por representar os botões da calculadora.
 
-Características:
+**Características:**
 - Recebe o valor do botão (número ou operação)  
 - Executa uma ação ao ser pressionado  
+- Permite customização de estilo (cores, tamanho, margem)  
 - Reutilizável em toda a interface  
 
 ---
@@ -57,30 +63,48 @@ Responsável por exibir:
 - Operações em andamento  
 - Resultado final  
 
+Possui alinhamento à direita e destaque visual para melhor leitura.
+
 ---
 
 ### Lógica da Calculadora
 
-Arquivo responsável pelo processamento das operações:
+Arquivo responsável pelo processamento das operações (`calculadora_logica.dart`):
 
 - Interpretação das entradas do usuário  
 - Montagem da expressão matemática  
-- Cálculo do resultado  
+- Cálculo do resultado final  
 
 ---
 
-## Layout
+## 5. Estrutura da Interface
 
 A interface foi construída utilizando os principais widgets do Flutter:
 
-- Column: organização vertical dos elementos  
-- Row: organização horizontal dos botões  
-- Expanded: distribuição proporcional do espaço  
-- Container: estilização dos componentes  
+- `Column`: organização vertical dos elementos  
+- `Row`: organização horizontal dos botões  
+- `Expanded`: distribuição proporcional do espaço  
+- `Container`: estilização dos componentes  
+- `InkWell`: detecção de clique nos botões  
+
+A tela principal organiza os números, operadores e display de forma responsiva.
 
 ---
 
-## Como Executar o Projeto
+## 6. Estrutura de Pastas 
+lib/
+├── widgets/
+│ ├── botao.dart
+│ └── display.dart
+├── utils/
+│ └── calculadora_logica.dart
+├── pages/
+│ └── calculadora_page.dart
+└── main.dart
+
+---
+
+## 7. Como Executar o Projeto
 
 ### Pré-requisitos
 
@@ -95,18 +119,25 @@ A interface foi construída utilizando os principais widgets do Flutter:
 
 ### Passos para execução
 
+bash
 # Clonar o repositório
-git clone 
+git clone <url-do-repositorio>
 
 # Acessar a pasta do projeto
 cd calculadora-flutter
 
-# Instalar as dependências
+# Instalar dependências
 flutter pub get
 
 # Executar o projeto
 flutter run
 
-### Imagem execução
+8. Objetivo Acadêmico
 
-<img width="520" height="621" alt="image" src="https://github.com/user-attachments/assets/cb9c2e08-791f-4ab4-9e94-ec88835ad730" />
+Este projeto tem como objetivo consolidar os conhecimentos em:
+
+Desenvolvimento com Flutter
+Componentização de widgets
+Organização de código
+Construção de interfaces responsivas
+Separação entre lógica e interface
