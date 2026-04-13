@@ -8,14 +8,14 @@ void main() {
   testWidgets('app inicia', (WidgetTester tester) async {
     await tester.pumpWidget(const ProviderScope(child: MyApp()));
     expect(find.byType(MaterialApp), findsOneWidget);
-    expect(find.text('+'), findsOneWidget);
+    expect(find.byIcon(Icons.add_rounded), findsOneWidget);
   });
 
-  testWidgets('adicionar tarefa via UI basica', (WidgetTester tester) async {
+  testWidgets('adicionar tarefa via UI', (WidgetTester tester) async {
     await tester.pumpWidget(const ProviderScope(child: MyApp()));
 
     await tester.enterText(find.byType(TextField), 'comprar leite');
-    await tester.tap(find.text('+'));
+    await tester.tap(find.byIcon(Icons.add_rounded));
     await tester.pump();
 
     expect(find.text('comprar leite'), findsOneWidget);

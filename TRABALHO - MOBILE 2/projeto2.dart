@@ -2,6 +2,11 @@
 
 import 'dart:io';
 
+bool anoPublicacaoValido(int ano) {
+  final atual = DateTime.now().year;
+  return ano >= 1000 && ano <= atual + 1;
+}
+
 class Livro {
   String id;
   String titulo;
@@ -15,20 +20,25 @@ class Livro {
     required this.anoPublicacao,
   });
 
-  void atualizar({
+  bool atualizar({
     String? novoTitulo,
     String? novoAutor,
     int? novoAnoPublicacao,
   }) {
+    var alterou = false;
     if (novoTitulo != null && novoTitulo.trim().isNotEmpty) {
       titulo = novoTitulo.trim();
+      alterou = true;
     }
     if (novoAutor != null && novoAutor.trim().isNotEmpty) {
       autor = novoAutor.trim();
+      alterou = true;
     }
-    if (novoAnoPublicacao != null) {
+    if (novoAnoPublicacao != null && anoPublicacaoValido(novoAnoPublicacao)) {
       anoPublicacao = novoAnoPublicacao;
+      alterou = true;
     }
+    return alterou;
   }
 
   @override
@@ -39,6 +49,8 @@ class Livro {
 
 class Biblioteca {
   final List<Livro> _livros = [];
+
+  List<Livro> get listaLivros => List.unmodifiable(_livros);
 
   void cadastrarLivro(Livro livro) {
     final livroExistente = buscarLivroPorId(livro.id);
@@ -58,7 +70,7 @@ class Biblioteca {
     }
 
     print('\n=== Livros Cadastrados ===');
-    for (final livro in _livros) {
+    for (final livro in listaLivros) {
       print(livro);
     }
   }
@@ -79,12 +91,16 @@ class Biblioteca {
       return;
     }
 
-    livro.atualizar(
+    final alterou = livro.atualizar(
       novoTitulo: titulo,
       novoAutor: autor,
       novoAnoPublicacao: ano,
     );
-    print('\nLivro atualizado com sucesso!');
+    if (alterou) {
+      print('\nLivro atualizado com sucesso!');
+    } else {
+      print('\nNenhuma alteracao foi realizada (campos em branco ou ano invalido).');
+    }
   }
 
   void removerLivro(String id) {
@@ -137,6 +153,12 @@ void main() {
           print('\nDados invalidos. Tente novamente.');
           break;
         }
+        if (!anoPublicacaoValido(ano)) {
+          print(
+            '\nAno de publicacao invalido. Informe um ano entre 1000 e ${DateTime.now().year + 1}.',
+          );
+          break;
+        }
 
         final livro = Livro(
           id: id,
@@ -153,6 +175,10 @@ void main() {
 
       case '3':
         final id = lerEntrada('Informe o ID do livro que deseja atualizar: ');
+        if (id.isEmpty) {
+          print('\nID invalido. Informe um identificador.');
+          break;
+        }
         final livro = biblioteca.buscarLivroPorId(id);
 
         if (livro == null) {
@@ -170,6 +196,12 @@ void main() {
           print('\nAno invalido. Atualizacao cancelada.');
           break;
         }
+        if (novoAno != null && !anoPublicacaoValido(novoAno)) {
+          print(
+            '\nAno fora do intervalo permitido (1000 a ${DateTime.now().year + 1}). Atualizacao cancelada.',
+          );
+          break;
+        }
 
         biblioteca.atualizarLivro(
           id,
@@ -181,6 +213,10 @@ void main() {
 
       case '4':
         final id = lerEntrada('Informe o ID do livro que deseja remover: ');
+        if (id.isEmpty) {
+          print('\nID invalido. Informe um identificador.');
+          break;
+        }
         biblioteca.removerLivro(id);
         break;
 
