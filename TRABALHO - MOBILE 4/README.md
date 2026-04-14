@@ -2,16 +2,16 @@
 
 ## Trabalho 4 — Aplicação de Lista de Tarefas com Gestão de Estado (To-Do List)
 
-## 📌 Descrição
+##  Descrição
 Este projeto consiste em um aplicativo de lista de tarefas (To-Do List) desenvolvido em Flutter. A aplicação permite ao usuário gerenciar suas tarefas diárias, possibilitando adicionar novas tarefas, visualizar a lista, marcar tarefas como concluídas e removê-las. O objetivo principal é aplicar conceitos de gestão de estado utilizando Riverpod, além de boas práticas de organização entre interface e lógica. A interface em main.dart é propositalmente mínima (só para testar o estado); o layout refinado pode ser feito depois em lib/widgets/.
 
-## 🎯 Funcionalidades
-- ➕ Adicionar tarefas
-- ✔️ Marcar como concluída
-- 🗑️ Remover tarefas
-- 🔄 Atualização dinâmica
+##  Funcionalidades
+-  Adicionar tarefas
+-  Marcar como concluída
+-  Remover tarefas
+-  Atualização dinâmica
 
-## ℹ️ Explicação de como foi Implementada a Gestão de Estado:
+##  Explicação de como foi Implementada a Gestão de Estado:
 
 A gestão de estado foi realizada utilizando o Riverpod, que permite controlar e compartilhar o estado da aplicação de forma eficiente.
 
@@ -26,20 +26,21 @@ id (int)
 title (String)
 done (boolean)
 
-## 🧠 Conceitos aplicados
+##  Conceitos aplicados
 - Gestão de estado
 - Widgets dinâmicos
 - ListView
 - Interação com usuário
 
-## 📷 Prints ou Gifs Demonstrando o Funcionamento:
+##  Prints ou Gifs Demonstrando o Funcionamento:
+
 Arquivos em TRABALHO - MOBILE 4/prints/
 
-## 🎥 Vídeo demonstrativo
+##  Vídeo demonstrativo
 
 👉 [Coloque aqui o link]
 
-## ▶️ Como executar
+##  Como executar
 
 Na pasta do projeto (TRABALHO - MOBILE 4), no terminal:
 
