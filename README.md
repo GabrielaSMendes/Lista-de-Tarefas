@@ -3,7 +3,7 @@ ADSIS - 5º Semestre
 
 Este repositório contém os trabalhos desenvolvidos na disciplina de Programação para Dispositivos Móveis, utilizando Dart e Flutter.
 
-## 📂 Projetos
+##  Projetos
 
 -  Trabalho 1: Hello World em Dart (de caráter individual)
 -  Trabalho 2: CRUD de Biblioteca (POO)  
@@ -12,7 +12,7 @@ Este repositório contém os trabalhos desenvolvidos na disciplina de Programaç
 
 Cada pasta contém seu próprio README com mais detalhes.
 
-## 👥 Integrantes
+##  Integrantes
 
 - Caetano Mikulis  
 - Gabriela Souza Mendes  
@@ -20,7 +20,7 @@ Cada pasta contém seu próprio README com mais detalhes.
 - Ryan do Vale  
 - Leonardo Sampaio  
 
-## 🛠️ Tecnologias
+##  Tecnologias
 
 - Dart  
 - Flutter  
