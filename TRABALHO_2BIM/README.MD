@@ -1,4 +1,6 @@
-# Movie App
+# README — TRABALHO 1
+
+## Trabalho 1 — Otimização de Listas e Interatividade no Flutter
 
 ## Objetivo
 
